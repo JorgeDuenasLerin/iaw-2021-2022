@@ -1,3 +1,20 @@
+<?php
+echo "GET:<br>";
+print_r($_GET);
+
+echo "<br>POST:<br>";
+print_r($_POST);
+
+echo "<br>COOKIES:<br>";
+print_r($_COOKIES);
+
+echo "<br>SESSION:<br>";
+print_r($_SESSION);
+
+echo "<br>SERVER:<br>";
+print_r($_SERVER);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +25,7 @@
 </head>
 <body>
     <div>
-        <form action="">
+        <form action="index.php" method="post">
             <fieldset>
                 <legend>Información Personal</legend>
                 <label for="nombre">Nombre:</label>
@@ -19,10 +36,12 @@
 
             <fieldset>
                 <legend>Edad</legend>
-                <label><input type="checkbox" tabindex="20" name="edad" value="20-39" /> 20-39</label>
-                <label><input type="checkbox" tabindex="21" name="edad" value="40-59" /> 40-59</label>
-                <label><input type="checkbox" tabindex="22" name="edad" value="60-79" /> 60-79</label>
+                <label><input type="radio" tabindex="20" name="edad" value="20-39" /> 20-39</label>
+                <label><input type="radio" tabindex="21" name="edad" value="40-59" /> 40-59</label>
+                <label><input type="radio" tabindex="22" name="edad" value="60-79" /> 60-79</label>
             </fieldset>
+
+            <input type="submit" name="enviar" value="Enviar">
         </form>
     </div>
 </body>
