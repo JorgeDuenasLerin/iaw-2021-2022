@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+span h1 {
+    background-color: #F0F;
+}
+
+
+span > h1 {
+    background-color: #0F0;
+}
+
+div#cabecera {
+    background-color: black;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+}
+
+.noticia {
+    margin: 0 auto;
+    width: 500px;
+    border: 1px solid red;
+}
+
+div.noticia > img {
+    float: left;
+    margin: 3px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    background-color: grey;
+    width: 100%;
+    height: 60px;
+}
+
+/*
+h1 {
+
+}
+
+p {
+
+}
+
+h1, p {
+
+}*/
+
