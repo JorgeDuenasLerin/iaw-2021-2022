@@ -1,4 +1,17 @@
 <?php
+
+$bienvenido=true;
+$nombre="";
+$apellido='';
+
+if(isset($_POST["enviar"])){
+    $bienvenido=false;
+    $nombre=$_POST["nombre"];
+}
+
+/*
+echo "<br>";
+
 echo "GET:<br>";
 print_r($_GET);
 
@@ -13,8 +26,8 @@ print_r($_SESSION);
 
 echo "<br>SERVER:<br>";
 print_r($_SERVER);
+*/
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,12 +37,15 @@ print_r($_SERVER);
     <title>Formulario</title>
 </head>
 <body>
+    <?php if($bienvenido) { ?>
+        <h1>Bienvenido!!!</h1>
+    <?php } ?>
     <div>
         <form action="index.php" method="post">
             <fieldset>
                 <legend>Información Personal</legend>
                 <label for="nombre">Nombre:</label>
-                <input name="nombre" id="nombre" type="text" tabindex="1" />
+                <input name="nombre" id="nombre" type="text" tabindex="1" value="<?php echo $nombre; ?>" />
                 <label for="apellidos">Apellidos:</label>
                 <input name="apellidos" id="apellidos" type="text" tabindex="2" />
             </fieldset>
