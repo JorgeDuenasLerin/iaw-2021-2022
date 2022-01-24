@@ -13,17 +13,20 @@ if(isset($_POST["enviar"])){
     $apellidos=$_POST["apellidos"];
 
     if(isset($_POST["edad"])){
-        /*if($_POST["edad"]=="20-39") {
+        /*
+        if($_POST["edad"]=="20-39") {
             $edad_20_39='checked';
-        }*/
-        $edad_20_39=($_POST["edad"]=="20-39")?'checked':'';
-
+        }
         if($_POST["edad"]=="40-59") {
             $edad_40_59='checked';
         }
         if($_POST["edad"]=="60-79") {
             $edad_60_79='checked';
         }
+        */
+        $edad_20_39=($_POST["edad"]=="20-39")?'checked':'';
+        $edad_40_59=($_POST["edad"]=="40-59")?'checked':'';
+        $edad_60_79=($_POST["edad"]=="60-79")?'checked':'';
     }
 }
 
