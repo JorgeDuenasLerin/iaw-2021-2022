@@ -24,9 +24,12 @@ if(isset($_POST["enviar"])){
             $edad_60_79='checked';
         }
         */
-        $edad_20_39=($_POST["edad"]=="20-39")?'checked':'';
-        $edad_40_59=($_POST["edad"]=="40-59")?'checked':'';
-        $edad_60_79=($_POST["edad"]=="60-79")?'checked':'';
+        /*
+        $edad_20_39=($_POST["edad"]=="20_39")?'checked':'';
+        $edad_40_59=($_POST["edad"]=="40_59")?'checked':'';
+        $edad_60_79=($_POST["edad"]=="60_79")?'checked':'';
+        */
+        ${"edad_".$_POST["edad"]}='checked';
     }
 }
 
@@ -74,9 +77,9 @@ print_r($_SERVER);
 
             <fieldset>
                 <legend>Edad</legend>
-                <label><input type="radio" tabindex="20" name="edad" value="20-39" <?=$edad_20_39?>/> 20-39</label>
-                <label><input type="radio" tabindex="21" name="edad" value="40-59" <?=$edad_40_59?>/> 40-59</label>
-                <label><input type="radio" tabindex="22" name="edad" value="60-79" <?=$edad_60_79?>/> 60-79</label>
+                <label><input type="radio" tabindex="20" name="edad" value="20_39" <?=$edad_20_39?>/> 20-39</label>
+                <label><input type="radio" tabindex="21" name="edad" value="40_59" <?=$edad_40_59?>/> 40-59</label>
+                <label><input type="radio" tabindex="22" name="edad" value="60_79" <?=$edad_60_79?>/> 60-79</label>
             </fieldset>
 
             <input type="submit" name="enviar" value="Enviar">
