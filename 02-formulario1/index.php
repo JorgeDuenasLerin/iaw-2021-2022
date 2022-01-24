@@ -2,12 +2,31 @@
 
 $bienvenido=true;
 $nombre="";
-$apellido='';
+$apellidos='';
+$edad_20_39='';
+$edad_40_59='';
+$edad_60_79='';
 
 if(isset($_POST["enviar"])){
     $bienvenido=false;
     $nombre=$_POST["nombre"];
+    $apellidos=$_POST["apellidos"];
+
+    if(isset($_POST["edad"])){
+        if($_POST["edad"]=="20-39") {
+            $edad_20_39='checked';
+        }
+        if($_POST["edad"]=="40-59") {
+            $edad_40_59='checked';
+        }
+        if($_POST["edad"]=="60-79") {
+            $edad_60_79='checked';
+        }
+    }
 }
+
+echo "<br>POST:<br>";
+print_r($_POST);
 
 /*
 echo "<br>";
@@ -15,8 +34,6 @@ echo "<br>";
 echo "GET:<br>";
 print_r($_GET);
 
-echo "<br>POST:<br>";
-print_r($_POST);
 
 echo "<br>COOKIES:<br>";
 print_r($_COOKIES);
@@ -45,16 +62,16 @@ print_r($_SERVER);
             <fieldset>
                 <legend>Información Personal</legend>
                 <label for="nombre">Nombre:</label>
-                <input name="nombre" id="nombre" type="text" tabindex="1" value="<?php echo $nombre; ?>" />
+                <input name="nombre" id="nombre" type="text" tabindex="1" value="<?=$nombre?>" />
                 <label for="apellidos">Apellidos:</label>
-                <input name="apellidos" id="apellidos" type="text" tabindex="2" />
+                <input name="apellidos" id="apellidos" type="text" tabindex="2" value="<?=$apellidos?>"/>
             </fieldset>
 
             <fieldset>
                 <legend>Edad</legend>
-                <label><input type="radio" tabindex="20" name="edad" value="20-39" /> 20-39</label>
-                <label><input type="radio" tabindex="21" name="edad" value="40-59" /> 40-59</label>
-                <label><input type="radio" tabindex="22" name="edad" value="60-79" /> 60-79</label>
+                <label><input type="radio" tabindex="20" name="edad" value="20-39" <?=$edad_20_39?>/> 20-39</label>
+                <label><input type="radio" tabindex="21" name="edad" value="40-59" <?=$edad_40_59?>/> 40-59</label>
+                <label><input type="radio" tabindex="22" name="edad" value="60-79" <?=$edad_60_79?>/> 60-79</label>
             </fieldset>
 
             <input type="submit" name="enviar" value="Enviar">
