@@ -13,9 +13,11 @@ if(isset($_POST["enviar"])){
     $apellidos=$_POST["apellidos"];
 
     if(isset($_POST["edad"])){
-        if($_POST["edad"]=="20-39") {
+        /*if($_POST["edad"]=="20-39") {
             $edad_20_39='checked';
-        }
+        }*/
+        $edad_20_39=($_POST["edad"]=="20-39")?'checked':'';
+
         if($_POST["edad"]=="40-59") {
             $edad_40_59='checked';
         }
