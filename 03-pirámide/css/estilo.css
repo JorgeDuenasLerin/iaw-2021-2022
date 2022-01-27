@@ -1,0 +1,11 @@
+#contenido {
+    margin: 0 auto;
+    width: 600px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 2em;
+}
+
+p {
+    font-size: 3em;
+}
