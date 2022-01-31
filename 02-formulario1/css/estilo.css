@@ -1,0 +1,8 @@
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.background-error {
+    background-color: rgb(251, 216, 210);
+}
