@@ -7,6 +7,10 @@ if(isset($_POST['altura'])){
     $altura=$_POST['altura'];
 }
 
+if(isset($_GET['altura'])){
+    $enviado=true;
+    $altura=$_GET['altura'];
+}
 
 ?>
 <!DOCTYPE html>
@@ -15,6 +19,9 @@ if(isset($_POST['altura'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php if ($enviado==true) { ?>
+        <meta http-equiv="refresh" content="1; url=index.php?altura=<?=altura?>">
+    <?php } ?> 
     <title>Pirámide</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
