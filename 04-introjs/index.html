@@ -12,10 +12,18 @@
             let numClicks = 0
             // Obtener elemento del HTML en JS
             pulsaBtn = document.getElementById("pulsaBtn")
+            let salida = document.getElementById("salida")
+            
             // Asociar la ejecución de una función al evento click
             pulsaBtn.addEventListener("click", function(){
                 numClicks = numClicks +1
-                alert("Me has pulsado" + numClicks + "!")
+                if(numClicks == 1){
+                    salida.innerHTML="Bienvenido!"
+                    //alert("Bienvenido!")
+                } else { 
+                    salida.innerHTML="Me has pulsado" + numClicks + "!"
+                    //alert("Me has pulsado" + numClicks + "!")
+                }
             })
             //document.writeln("Hola mundo JS!")
             //alert('Hola mundo')
@@ -25,5 +33,6 @@
 <body>
     <h1>Hola HTML</h1>
     <button id="pulsaBtn">Púlsame!!!</button>
+    <div id="salida">Salida</div>
 </body>
 </html>
