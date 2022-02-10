@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <script>
+        window.addEventListener("load", function(){
+            let que = document.getElementById("que")
+            let cuantos = document.getElementById("cuantos")
+            let listaCompra = document.getElementById("listaCompra")
+            let bAdd = document.getElementById("bAdd")
+            bAdd.addEventListener("click", function(evnt){
+                
+                if (que.value != '' && cuantos.value != ''){
+                    let intCuantos = parseInt(cuantos.value)
+                    for (let i = 0; i < intCuantos; i++){
+                        let newLi = document.createElement("li")
+                        newLi.innerHTML = que.value
+                        listaCompra.appendChild(newLi)
+                    }
+                    que.value = ''
+                    cuantos.value = ''
+                } else {
+                    alert("Membrillo!!")
+                }
+                
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" name="" id="que" placeholder="¿Qué comprar?">
+        <input type="number" name="" id="cuantos" placeholder="¿Cuántos?">
+        <button id="bAdd">Add</button>
+    </div>
+    <ul id="listaCompra">
+    </ul>
+</body>
+</html>
