@@ -15,7 +15,7 @@ include("visit_counter.php");
     <?php } else { ?>
         <h1>Es tu <?=$nvisita?> visita!!</h1>
     <?php } ?>
-    <h1>Hola</h1><br>
+    <h1>Cookies</h1><br>
     <?php include("menu.php"); ?>
 </body>
 </html>
