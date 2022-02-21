@@ -1,0 +1,25 @@
+#content {
+    margin: 0 auto;
+    padding: 1em;
+    width: 50%;
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+}
+
+table, table td, table th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: grey;
+    color: white;
+    font-weight: bolder;
+}
+
+table td {
+    text-align: center;
+}
