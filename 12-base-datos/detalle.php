@@ -3,9 +3,13 @@ include('acceso_datos.php');
 
 // ERORO SQLi
 // No hacer
-$datos = $conexion_bd->query('SELECT * FROM Ciclistas WHERE id='. $_GET['id']);
+// $datos = $conexion_bd->query('SELECT * FROM Ciclistas WHERE id='. $_GET['id']);
 
-print_r($datos->fetchAll());
+//SELECT with WHERE shorter
+$select = $conexion_bd->prepare("SELECT * FROM Ciclistas WHERE id = :id;");
+$row = $select->fetch($select->execute(array(':id' => $_GET['id'])));
+
+//print_r($row);
 
 ?>
 <!DOCTYPE html>
@@ -20,13 +24,10 @@ print_r($datos->fetchAll());
 <body>
     <div id="content">
         <h1>Listado de cilistas</h1>
-        <h2>Jorge</h2>
-        <img src="trofeo.png" alt="Trofeo">
-        <img src="trofeo.png" alt="Trofeo">
-        <img src="trofeo.png" alt="Trofeo">
-        <img src="trofeo.png" alt="Trofeo">
-        <img src="trofeo.png" alt="Trofeo">
-
+        <h2><?=$row['nombre']?></h2>
+        <?php for($i=0;$i<$row['num_trofeos'];$i++) { ?>
+            <img src="trofeo.png" alt="Trofeo">
+        <?php } ?>
     </div>
 </body>
 </html>
