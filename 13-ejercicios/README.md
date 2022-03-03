@@ -9,9 +9,9 @@ Sacar el resultado de la operación en un h1
 
 ### Marcador teléfono
 
-Crea un marcador de teléfono 
+Crea un marcador de teléfono
 
-1 2 3 
+1 2 3
 4 5 6
 7 8 9
   0
@@ -139,3 +139,27 @@ SQL -> LIKE
 #### Bases de datos
 
 Haz una página con la misma base de datos para sacar un listado ordenado por edad de mayor a menor
+
+
+#### Sesiones extra
+
+NOTA: el uso principal de la sesión es mantener información para el usuario dentro del servidor asociado a un identificador guardado en una cookie.
+
+##### Nickname
+
+Haz dos página: index y config
+
+En index saldrá lorem ipsum (texto aleatorio que hace de contenido) y un div arriba a la derecha con el texto anónimo y una foto de anónimo o el nombre configurado y la imagen
+En config tendrás un formulario para configurar tu nombre y una url a una image
+
+
+##### Adivina primos
+
+Crea un formulario para enviar números de al menos 5 dígitos (el usuario siempre manda número de 5 dígitos, no es necesario hacer esta verificación)
+
+Cuando envía el formulario la página mantiene el número, saca un mensaje diciendo si el número es primo o no. La página muestra un contador de cuántos primos ha acertado el usuario.
+
+##### Adivina primos ++
+
+Haz que se mantenga en la sesión los primos que ha acertado para que no pueda repetir el acierto de un primo.
+Haz un botón de nueva partida que reinicia el contador
