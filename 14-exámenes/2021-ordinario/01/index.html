@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases</title>
+    <script>
+        window.addEventListener('load', function(){
+            let frase = document.getElementById('frase')
+            let veces = document.getElementById('veces')
+            let addFrase = document.getElementById('addFrase')
+            let listado = document.getElementById('listado')
+            
+            addFrase.addEventListener('click', function(e){
+                let nVeces = parseInt(veces.value)
+                for(let i = 0; i < nVeces; i++) {
+                    let li = document.createElement('li')
+                    li.innerHTML = frase.value
+                    li.style="background-color: " + '#'+Math.floor(Math.random()*(255*255*255)).toString(16) + "; color: " + '#'+Math.floor(Math.random()*16777215).toString(16) +";"
+                    listado.appendChild(li)
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <input type="number" id="frase"> 
+        <input type="numeric" id="veces"> 
+        <input type="button" id="addFrase" value="Añade frase">
+    </div>
+    <ul id="listado">
+    </ul>
+</body>
+</html>

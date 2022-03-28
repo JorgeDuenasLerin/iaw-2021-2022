@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', function(){
+            let radio = document.getElementById('radio')
+            let circunferencia = document.getElementById('circunferencia')
+            let circulo = document.getElementById('círculo')
+            let esfera = document.getElementById('esfera')
+            let calcular = document.getElementById('calcular')
+            let resultado = document.getElementById('resultado')
+            calcular.addEventListener("click", function(){
+                resultado.innerHTML = ''
+
+                let r = parseFloat(radio.value)
+                if(circunferencia.checked) {
+                    resultado.innerHTML = resultado.innerHTML + "Longitud: " + (2 * 3.14 * r) + "<br>"
+                }
+
+                if(circulo.checked) {
+                    resultado.innerHTML = resultado.innerHTML + "Área: " + (3.14 * r * r) + "<br>"
+                }
+
+                if(esfera.checked) {
+                    resultado.innerHTML = resultado.innerHTML + "Esfera: " + ((4/3) * 3.14 * r * r * r) + "<br>"
+                }
+
+                if(esfera.checked == false && circulo.checked == false && circunferencia.checked == false) {
+                    resultado.innerHTML = "Por favor selecciona 1"
+                }
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="controles">
+        <input type="number" name="" id="radio"><br>
+        <input type="checkbox" name="" id="circunferencia"> circunferencia<br>
+        <input type="checkbox" name="" id="círculo"> círculo<br>
+        <input type="checkbox" name="" id="esfera"> esfera<br>
+        <input type="button" id="calcular" value="Calcular">
+    </div>
+    <div id="resultado">
+
+    </div>
+</body>
+</html>
