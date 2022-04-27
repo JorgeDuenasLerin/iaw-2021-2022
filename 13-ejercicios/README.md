@@ -47,6 +47,22 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event
 
 Cada vez que entre y salgas añade a una lista HTML como elmento NUEVO li  el texto "Entrada" o Salida
 
+### Cálculo de litros por maceta
+
+Fuente: Fórmula para saber cuánto sustrato necesitas en una maceta rectangular irregular
+https://www.jardineriaon.com/calcular-litros-maceta?fbclid=IwAR0wO7eiLGfTORtAP7mTNHp8iW7G8_GY1bUECH5Mz-cukFeQTKz_q8dyDys#:~:text=Te%20ponemos%20un%20ejemplo.,1000%20para%20obtener%20los%20litros.
+
+```
+Para una maceta rectangular irregular, es decir, que hace la figura de un “tronco de pirámide (rectangular)”, que es como se le llama en matemáticas.
+
+Y para ello, la fórmula es algo más compleja (pero fácil si tienes a mano una calculadora). En concreto, sería:
+
+V = h/3 × (A1 + A2 + √(A1×A2))
+
+Te la explicamos. h se refiere a la altura de la jardinera. A1 sería el área (su largo por su ancho) de la parte superior (por donde vas a colocar la planta) y A2 sería el área de la base (donde tienes los agujeros de la jardinera). Y por último, la raíz cuadrada es del producto (la multiplicación de A1yA2).
+```
+
+NOTA: Tanto en JS como en PHP
 
 ## PHP
 

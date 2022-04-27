@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener('load', function(){
+            let boton = document.getElementById('boton')
+            let salida = document.getElementById('salida')
+
+            boton.addEventListener('mouseenter', function(){
+                nuevoLi = document.createElement("li")
+                nuevoLi.innerHTML='Has entrado'
+                salida.appendChild(nuevoLi)
+            })
+
+            boton.addEventListener('mouseleave', function(){
+                nuevoLi = document.createElement("li")
+                nuevoLi.innerHTML='Has salido'
+                salida.appendChild(nuevoLi)
+            })
+
+            boton.addEventListener('mouseover', function(){
+                salida.style='color: #' + Math.floor(Math.random()*16777215).toString(16)
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="Pasa sobre mí" id="boton">
+    <ul id="salida">
+    </ul>
+</body>
+</html>
