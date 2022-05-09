@@ -38,4 +38,9 @@ Utiliza el identificador de la fila de Pokemon para hacer una página que muestr
 
 ## 2. Cookies
 
+Basándonos en esta historia:
 https://matematicascercanas.com/2014/03/10/la-leyenda-del-tablero-de-ajedrez-y-los-granos-de-trigo/
+
+Haz una página que en la primera visita establezca una cookie a 1 y escriba un texto "1 grano de arroz".
+
+La siguiente vez que visite la página deberá indicar cuántos grandos de arroz llevas según la historia del comienzo.
